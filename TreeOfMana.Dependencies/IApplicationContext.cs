@@ -1,9 +1,14 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
 
 namespace TreeOfMana.Dependencies
 {
-    public interface IApplicationContext
+    public interface IApplicationContext : IDisposable
     {
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
+
+        int SaveChanges();
+
+        bool DeleteDatabase();
     }
 }

@@ -20,12 +20,14 @@ namespace TreeOfMana.Controllers
         public HomeController(ISkillService skillService)
         {
             this.skillService = skillService;
-            skillService.Test();
+            //skillService.Import();
         }
 
         public ActionResult Index()
         {
-            return View();
+            var vm = MefConfig.Container.GetExportedValue<Models.Home.IndexViewModel>();
+
+            return View(vm);
         }
 
         public ActionResult About()

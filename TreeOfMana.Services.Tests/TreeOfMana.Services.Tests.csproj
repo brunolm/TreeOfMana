@@ -63,10 +63,6 @@
       <Project>{90e19244-3751-4c4a-bf42-c675eb0ce6d2}</Project>
       <Name>TreeOfMana.Dependencies</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TreeOfMana.Repositories\TreeOfMana.Repositories.csproj">
-      <Project>{6d259594-6112-45c4-ac37-1ec298c19f64}</Project>
-      <Name>TreeOfMana.Repositories</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TreeOfMana.Services\TreeOfMana.Services.csproj">
       <Project>{132f8345-5fbc-4eb1-9846-ad7f08c08ae8}</Project>
       <Name>TreeOfMana.Services</Name>

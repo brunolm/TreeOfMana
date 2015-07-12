@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace TreeOfMana.Dependencies
 {
-    public interface ISkillService
+    public interface ISkillService : IDisposable
     {
-        void Test();
+        void Import();
+
+        IEnumerable<Models.ISkill> Get();
     }
 }

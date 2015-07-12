@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IApplicationContext.cs" />
-    <Compile Include="IRepository.cs" />
     <Compile Include="ISkillService.cs" />
     <Compile Include="Models\IEntity.cs" />
+    <Compile Include="Models\ISkill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

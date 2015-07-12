@@ -1,0 +1,21 @@
+﻿@model dynamic
+
+@{
+    IEnumerable<TreeOfMana.Dependencies.Models.ISkill> skills = Model.Skills;
+    TreeOfMana.Dependencies.Models.ISkill skill = Model.Skill;
+    int depth = Model.Depth;
+}
+
+@foreach (var child in skills.Where(o => o.ParentSkillID == skill.ID))
+{
+    <text>
+        {
+            "id": @child.ID,
+            "name": "@Html.Raw(child.Name)",
+            "parent": "@skill.Name",
+            "children": [
+                @(Html.Partial("SkillTreeItemPartial", new { Skills = skills, Skill = child, Depth = depth + 1 }))
+            ]
+        },
+    </text>
+}
